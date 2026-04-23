@@ -183,6 +183,9 @@ Paste a draft – the system will:
 - Show a warning and suggest an automatically redacted version.
 
 **Example screenshot:**
+```
+My NRIC is S1234567A and I posted it online like a fool. I regret this deeply.
+```
 
 ![Gradio Web Interface](images/gradio_example.png)
 
