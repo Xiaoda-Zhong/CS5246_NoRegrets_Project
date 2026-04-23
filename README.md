@@ -8,7 +8,6 @@ toxic language, sensitive information, and other regret‑related signals.
 
 - [Project Overview](#project-overview)
 - [File Structure](#file-structure)
-- [Requirements](#requirements)
 - [Setup & Installation](#setup--installation)
 - [Reproducing the Results](#reproducing-the-results)
   - [Step 1: Build the Dataset](#step-1-build-the-dataset)
@@ -89,4 +88,39 @@ pip install -r requirements.txt
 
 # 5. Download TextBlob corpora (for sentiment analysis)
 python -m textblob.download_corpora
+
+---
+
+## Reproducing the Results
+
+All scripts should be run from the project root (`CS5246_NoRegrets_Project/`).
+
+### Step 1: Build the Dataset
+```bash
+python src/build_goemotions_dataset.py
+```
+
+### Step 2: Extract Toxicity Features
+```bash
+python src/data_collector_local.py
+```
+
+### Exploratory Data Analysis (EDA)
+```bash
+python src/eda_preprocess.py
+```
+
+Creates boxplot and subcategory bar chart.
+<table>
+  <tr>
+    <td align="center">
+      <img src="images/toxicity_boxplot.png" alt="Toxicity Boxplot" width="400"/>
+      <br/><em>Figure 1: Toxicity score distribution by regret label</em>
+    </td>
+    <td align="center">
+      <img src="images/toxicity_subcategory_bars.png" alt="Toxicity Subcategory Bars" width="400"/>
+      <br/><em>Figure 2: Average toxicity probability by subcategory</em>
+    </td>
+  </tr>
+</table>
 
