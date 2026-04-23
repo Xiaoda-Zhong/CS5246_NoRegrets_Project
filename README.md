@@ -40,6 +40,7 @@ A TF‑IDF + Logistic Regression model achieves the best performance (F1 = 0.56 
 ## File Structure
 
 After running all scripts, the repository will look like this:
+```
 CS5246_NoRegrets_Project/
 ├── data/                               # generated after Step 1 & 2
 │   ├── reddit_regret_data.csv          # raw text + binary label
@@ -65,6 +66,7 @@ CS5246_NoRegrets_Project/
 └── README.md
 > **Note**: `data/` and `models/` are ignored by Git (see `.gitignore`).  
 > They are automatically created when you run the scripts.
+```
 
 ---
 
