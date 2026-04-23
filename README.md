@@ -127,7 +127,6 @@ Creates boxplot and subcategory bar chart.
 
 ### Step 4: Train and Evaluate Models
 We provide several scripts to compare performance.
-The best model is TF‑IDF + Logistic Regression (balanced).
 
 #### 4.1 Baseline (unbalanced)
 ```bash
@@ -151,3 +150,37 @@ python src/tfidf_comparison.py
 ```
 
 ---
+
+## Results
+
+The best performing model is **TF‑IDF + Logistic Regression (balanced)**.
+
+| Model                          | Accuracy | Precision (class 1) | Recall (class 1) | F1 (class 1) |
+|--------------------------------|----------|---------------------|------------------|---------------|
+| Unbalanced Logistic Regression | 0.89     | 0.00                | 0.00             | 0.00          |
+| Balanced Logistic Regression   | 0.77     | 0.14                | 0.22             | 0.17          |
+| SMOTE + Random Forest          | 0.79     | 0.16                | 0.23             | 0.19          |
+| Enhanced Random Forest         | 0.80     | 0.26                | 0.44             | 0.33          |
+| **TF‑IDF + LR (balanced)**     | **0.88** | **0.47**            | **0.70**         | **0.56**      |
+
+> **Note**:
+> - Unbalanced Logistic Regression fails to predict any positive sample (recall = 0).
+> - Balanced Logistic Regression and SMOTE improve recall but still suffer from low precision.
+> - Adding hand‑crafted features (sensitive info, text length, polarity) further lifts recall to 0.44.
+> - TF‑IDF with class‑weighted logistic regression achieves the best trade‑off.
+
+---
+
+## Demo
+Run the Gradio web interface:
+```bash
+python src/warning_ui.py
+```
+Then open the provided local URL.
+Paste a draft – the system will:
+
+- Predict the probability of regret.
+- Detect sensitive information (phone, email, NRIC).
+- Show a warning and suggest an automatically redacted version.
+
+Example screenshot:
