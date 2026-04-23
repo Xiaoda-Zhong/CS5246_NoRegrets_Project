@@ -1,0 +1,15 @@
+praw
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+wordcloud
+nltk
+transformers
+torch
+gradio
+lime
+requests
+imbalanced-learn
+textblob
