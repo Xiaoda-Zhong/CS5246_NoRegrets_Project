@@ -88,6 +88,7 @@ pip install -r requirements.txt
 
 # 5. Download TextBlob corpora (for sentiment analysis)
 python -m textblob.download_corpora
+```
 
 ---
 
@@ -105,7 +106,7 @@ python src/build_goemotions_dataset.py
 python src/data_collector_local.py
 ```
 
-### Exploratory Data Analysis (EDA)
+### Step 3: Exploratory Data Analysis (EDA)
 ```bash
 python src/eda_preprocess.py
 ```
@@ -124,3 +125,29 @@ Creates boxplot and subcategory bar chart.
   </tr>
 </table>
 
+### Step 4: Train and Evaluate Models
+We provide several scripts to compare performance.
+The best model is TF‑IDF + Logistic Regression (balanced).
+
+#### 4.1 Baseline (unbalanced)
+```bash
+python src/baseline_model.py
+```
+Shows that without handling imbalance, the model ignores the regret class completely.
+
+#### 4.2 Balanced Models (class_weight & SMOTE)
+```bash
+python src/balanced_model.py
+```
+
+#### 4.3 Enhanced Model (adds sensitive info, length, polarity)
+```bash
+python src/enhanced_model.py
+```
+
+#### 4.4 TF‑IDF + Logistic Regression (best model)
+```bash
+python src/tfidf_comparison.py
+```
+
+---
