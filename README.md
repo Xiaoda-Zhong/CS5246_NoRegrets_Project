@@ -64,8 +64,6 @@ CS5246_NoRegrets_Project/
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-> **Note**: `data/` and `models/` are ignored by Git (see `.gitignore`).  
-> They are automatically created when you run the scripts.
 ```
 
 ---
