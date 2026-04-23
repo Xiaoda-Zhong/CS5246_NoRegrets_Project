@@ -197,5 +197,10 @@ Paste a draft – the system will:
 - TextBlob: Loria (2018) – [https://textblob.readthedocs.io/](https://textblob.readthedocs.io/)
 - SMOTE: Chawla et al. (2002) – *Journal of Artificial Intelligence Research*
 
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 
