@@ -183,4 +183,8 @@ Paste a draft – the system will:
 - Detect sensitive information (phone, email, NRIC).
 - Show a warning and suggest an automatically redacted version.
 
-Example screenshot:
+**Example screenshot:**
+
+![Gradio Web Interface](images/gradio_example.png)
+
+*Figure: Gradio interface showing warning and redaction for a regrettable post.*
