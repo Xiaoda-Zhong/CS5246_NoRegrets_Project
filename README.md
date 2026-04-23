@@ -41,29 +41,28 @@ A TF‑IDF + Logistic Regression model achieves the best performance (F1 = 0.56 
 
 After running all scripts, the repository will look like this:
 CS5246_NoRegrets_Project/
-├── data/ # generated after Step 1 & 2
-│ ├── reddit_regret_data.csv # raw text + binary label
-│ ├── analyzed_data.csv # toxicity features added
-│ ├── toxicity_boxplot.png # EDA output
-│ └── toxicity_subcategory_bars.png # EDA output
-├── models/ # generated after Step 4
-│ ├── enhanced_rf.pkl # Random Forest (hand‑crafted features)
-│ ├── tfidf_lr.pkl # Best model (TF‑IDF + LR)
-│ └── tfidf_vectorizer.pkl # TF‑IDF vectorizer
-├── src/ # all source code
-│ ├── build_goemotions_dataset.py # Step 1
-│ ├── data_collector_local.py # Step 2
-│ ├── eda_preprocess.py # Step 3
-│ ├── baseline_model.py # unbalanced baseline
-│ ├── balanced_model.py # with class_weight / SMOTE
-│ ├── enhanced_model.py # additional features + saving
-│ ├── tfidf_comparison.py # TF‑IDF baseline
-│ ├── warning_ui.py # Gradio demo
-│ └── utils.py # helper functions
+├── data/                               # generated after Step 1 & 2
+│   ├── reddit_regret_data.csv          # raw text + binary label
+│   ├── analyzed_data.csv               # toxicity features added
+│   ├── toxicity_boxplot.png            # EDA output
+│   └── toxicity_subcategory_bars.png   # EDA output
+├── models/                             # generated after Step 4
+│   ├── enhanced_rf.pkl                 # Random Forest (hand‑crafted features)
+│   ├── tfidf_lr.pkl                    # Best model (TF‑IDF + LR)
+│   └── tfidf_vectorizer.pkl            # TF‑IDF vectorizer
+├── src/                                # all source code
+│   ├── build_goemotions_dataset.py     # Step 1
+│   ├── data_collector_local.py         # Step 2
+│   ├── eda_preprocess.py               # Step 3
+│   ├── baseline_model.py               # unbalanced baseline
+│   ├── balanced_model.py               # with class_weight / SMOTE
+│   ├── enhanced_model.py               # additional features + saving
+│   ├── tfidf_comparison.py             # TF‑IDF baseline
+│   ├── warning_ui.py                   # Gradio demo
+│   └── utils.py                        # helper functions
 ├── .gitignore
 ├── requirements.txt
 └── README.md
-
 > **Note**: `data/` and `models/` are ignored by Git (see `.gitignore`).  
 > They are automatically created when you run the scripts.
 
