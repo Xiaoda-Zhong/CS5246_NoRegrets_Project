@@ -16,7 +16,6 @@ toxic language, sensitive information, and other regret‑related signals.
   - [Step 4: Train and Evaluate Models](#step-4-train-and-evaluate-models)
 - [Results](#results)
 - [Demo](#demo)
-- [Limitations and Future Work](#limitations-and-future-work)
 - [References](#references)
 
 ---
@@ -188,3 +187,15 @@ Paste a draft – the system will:
 ![Gradio Web Interface](images/gradio_example.png)
 
 *Figure: Gradio interface showing warning and redaction for a regrettable post.*
+
+---
+
+## References
+
+- GoEmotions dataset: Demszky et al., 2020 – [GitHub](https://github.com/google-research/google-research/tree/master/goemotions)
+- Toxic‑BERT: `unitary/toxic-bert` on [Hugging Face](https://huggingface.co/unitary/toxic-bert)
+- TextBlob: Loria (2018) – [https://textblob.readthedocs.io/](https://textblob.readthedocs.io/)
+- SMOTE: Chawla et al. (2002) – *Journal of Artificial Intelligence Research*
+
+
+
